@@ -5,6 +5,7 @@ package com.jillesvangurp.escodegen
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import com.jillesvangurp.escodegen.opensearch.EsCodeGeneratorOpensearch
 
 open class EsKotlinCodeGenPluginExtension {
     var output: String = "build/generated-kotlin-code"
@@ -17,6 +18,8 @@ class EsKotlinCodeGenPlugin : Plugin<Project> {
         // Register a task
         project.tasks.register("codegen") { task ->
             task.doLast {
+                val esCodeGeneratorOpensearch = EsCodeGeneratorOpensearch(sourceDir = ext.output)
+                esCodeGeneratorOpensearch.generateCode()
                 val esCodeGenerator = EsCodeGenerator(sourceDir = ext.output)
                 esCodeGenerator.generateCode()
             }
