@@ -20,7 +20,7 @@ repositories {
 }
 
 group = "com.github.jillesvangurp"
-version = "1.0"
+version = "1.0.0"
 
 // compile bytecode to java 8 (default is java 6)
 tasks.withType<KotlinCompile> {
@@ -33,6 +33,8 @@ val kotlinVersion = "1.5.10"
 dependencies {
     api("org.elasticsearch.client:elasticsearch-rest-high-level-client:_")
     api("org.elasticsearch.client:elasticsearch-rest-client:_")
+    api("org.opensearch.client:opensearch-rest-high-level-client:_")
+    api("org.opensearch.client:opensearch-rest-client:_")
 
     api(KotlinX.coroutines.jdk8)
     implementation("org.reflections:reflections:_")
