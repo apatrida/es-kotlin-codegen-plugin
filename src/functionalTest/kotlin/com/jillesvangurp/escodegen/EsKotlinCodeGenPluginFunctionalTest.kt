@@ -19,7 +19,7 @@ class EsKotlinCodeGenPluginFunctionalTest {
         projectDir.resolve("build.gradle").writeText(
             """
             plugins {
-                id('com.github.jillesvangurp.codegen')
+                id('com.github.apatrida.codegen')
             }
             
             codegen {

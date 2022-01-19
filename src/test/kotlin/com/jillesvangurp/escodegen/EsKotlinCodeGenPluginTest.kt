@@ -11,7 +11,7 @@ class EsKotlinCodeGenPluginTest {
     @Test fun `plugin registers task`() {
         // Create a test project and apply the plugin
         val project = ProjectBuilder.builder().build()
-        project.plugins.apply("com.github.jillesvangurp.codegen")
+        project.plugins.apply("com.github.apatrida.codegen")
 
         // Verify the result
         assertNotNull(project.tasks.findByName("codegen"))
