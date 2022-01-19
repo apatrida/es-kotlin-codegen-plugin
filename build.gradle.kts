@@ -19,7 +19,7 @@ repositories {
     mavenCentral()
 }
 
-group = "com.github.jillesvangurp"
+group = "com.github.apatrida"
 version = "1.0.0"
 
 // compile bytecode to java 8 (default is java 6)
@@ -28,7 +28,7 @@ tasks.withType<KotlinCompile> {
 }
 
 val elasticsearchVersion = "7.13.0"
-val kotlinVersion = "1.5.10"
+val kotlinVersion = "1.6.10"
 
 dependencies {
     api("org.elasticsearch.client:elasticsearch-rest-high-level-client:_")
@@ -62,7 +62,7 @@ tasks.withType<KotlinCompile> {
 gradlePlugin {
     plugins {
         create("codegen") {
-            id = "com.github.jillesvangurp.codegen"
+            id = "com.github.apatrida.codegen"
             implementationClass = "com.jillesvangurp.escodegen.EsKotlinCodeGenPlugin"
         }
     }
